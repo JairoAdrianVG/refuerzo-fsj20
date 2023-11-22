@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Pixelify+Sans:wght@500&family=Tilt+Neon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+body{
+    width: 100%;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px ;
+    background-color: #6bcdee;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+}
+
+.title-ecommerce{
+    text-decoration: none;
+    font-family: 'Tilt Neon', sans-serif;
+    color: white;
+    font-weight: 700;
+    font-size: 25px;
+    text-shadow: rgba(12, 12, 12, 0.8) 1px 3px;
+}
+
+.navbar-list{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    font-family: 'Playpen Sans',cursive;
+    font-weight: 600;
+}
+
+.navbar-list li{
+    padding: 0 20px;
+    list-style: none;
+}
+
+.navbar-list li a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar-list li a:hover{
+    color: #04698a;
+    text-shadow: rgba(255, 255, 255, 0.5) 1px 1px;
+}
+
+.hero{
+    background-image: url('https://www.aon.es/personales/seguro-perro-gato/wp-content/uploads/sites/2/2022/06/gastos-medios-2022-mascota.jpg');
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.products-section{
+    text-align: center;
+}
+
+.products-section .product img{
+    width: 100%;
+}
+
+.products-section .product {
+    width: 25%;
+    min-width: 250px;
+    padding: 10px 13px;
+    border: 1px solid rgb(155, 155, 180);
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.products-section .product .description {
+    text-align: start;
+    padding: 10px 0;
+}
+
+.products-section .product .description span{
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 600;
+    color: #606060;
+    font-size: 1.1rem;
+}
+
+.products-section .product .description h5{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.2rem
+}
+
+.products-section .product .description p{
+    font-family: 'Nunito';
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.products-section .product .description h4{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
