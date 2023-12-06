@@ -128,3 +128,42 @@ chiques.forEach( alumno => {
 })
 
 arrayNuevo.length > 0 ? console.log(arrayNuevo): console.log("Todos somos jovenes");
+
+//FUNCION EXPRESADA VS FUNCION FLECHA
+
+function saludar(callback){
+    console.log(`Hola, como andis?`);
+    callback();
+}
+
+function despedirse(){
+console.log("Besitos besitos chau chau");
+}
+
+const saludo = (callback) => {
+    console.log("Hola, como andis?");
+    callback();
+}
+
+const despedida = () => {
+    console.log("Besitos besitos chau chau ");
+}
+
+saludo(despedida);
+//Callback => Es una funcion llamada dentro de otra, la cual se debe recibir por parametro
+
+saludar(despedirse);
+
+//ForEach = Recorre el array y te da el valor de cada indice
+const mostrarObjeto = (objeto) => {console.log(objeto);}
+
+chiques.forEach(objeto => {
+    console.log(objeto);
+})
+
+//Imprimir datos en las posiciones del array
+for(let i = 0; i < chiques.length; i++){
+    objeto = chiques[i]; //cada posicion del array se llama ahora objeto
+    console.log(objeto); 
+}
+
