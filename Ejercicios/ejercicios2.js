@@ -46,3 +46,6 @@ let array = [1,12,423,465,75];
 let arrayFiltradito = array.filter(numero => numero < 10);
 console.log(arrayFiltradito);
 //Callback = ES UNA FUNCION QUE SE PASA COMO PARAMETRO A OTRA FUNCION
+
+
+
