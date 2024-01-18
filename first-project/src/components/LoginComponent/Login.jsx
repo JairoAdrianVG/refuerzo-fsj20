@@ -1,26 +1,39 @@
 import { useState } from "react"
-import { Greeting } from "../GreetingComponent/Greeting";
+import { Greeting }   from '../GreetingComponent/Greeting'
 
 export const Login = () => {
-    // una accion 
-    // toda la pagina tiene un estado, todos los componentes tienen un estado
-    // La interaccion de todos los componentes
-    // Punto de partida
-    // Es una configuracion o forma de estar de una cosa
-    // Acciones 
-    const [nombre,setNombre] = useState('Usuario');
-    const [email,setEmail] = useState('usuario@gmail.com')
+    const [username,setUsername] = useState("");
+    const [password,setPassword] = useState("");
+    const [isLogged,setLogged] = useState(false)
+
+    const handlePassword = (e) => {
+        setPassword(e.target.value)
+    }
+
+    const handleLogin = () => {
+        console.log(username);
+        console.log(password);
+        setLogged(true);
+    }
 
     return(
     <>
-        <h1>Soy el Login y tu nombre es {nombre}</h1>
-        <label>Ingrese su usuario:</label>
-        <input type="text" placeholder="Usuario" onChange={ () => { console.log("cambiaste o escribiste algo en el input usuario") }}/>
-        <label>Ingrese su contrasenia:</label>
-        <input type="password" placeholder="Contraseña"/>
-        <button onClick={() => setNombre('Luis')}>Ingresar</button>
-        <br/>
-        <Greeting nombre={nombre} mail={email} apellido="Vega"/>
+        {
+            isLogged ? 
+            <div>
+            <Greeting nombre={username} />
+            <button onClick={() => setLogged(false)}>Logout</button>
+            </div> : 
+            <div>
+                <h1>Iniciar Sesion</h1>
+                <label>Ingrese su usuario:</label>
+                <input type="text" placeholder="Usuario" onChange={(e) => { setUsername(e.target.value)}} />
+                <label>Ingrese su contrasenia:</label>
+                <input type="password" placeholder="Contraseña" onChange={handlePassword}/>
+                <button onClick={handleLogin}>Ingresar</button>
+            </div>
+            
+        }
     </>
 )
 }

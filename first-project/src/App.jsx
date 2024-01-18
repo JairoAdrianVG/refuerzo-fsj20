@@ -10,10 +10,11 @@ function App() {
 
   return (
     <>
-     <h1>Holis</h1>
      <LoginUser/>
     </>
   )
 }
+
+
 
 export default App
